@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  	<meta charset="utf-8">
+  	<title></title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+
+  	<style type="text/css">
+  		html, body{
+  			margin: 0;
+        	background-color: black;
+  		}
+  		.header{
+  			width: 100%;
+  			height: 120px;
+  			background-color: black;
+  			background-image: url("images/head.png");
+  			margin-bottom: 5px;
+  		}
+  		.mediaContent{
+  			display: grid;
+  			grid-gap: 8px;
+  			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  			grid-template-rows: 300px;
+  			grid-auto-flow: dense;
+  		}
+  		.vertical{
+		    grid-row: span 2;
+		    grid-column: auto / span 2;
+		    position: relative;
+        	border: 2px solid grey;
+        	padding: 6px;
+  		}
+  		.horizontal{
+    		grid-column: auto / span 2;
+    		position: relative;
+        	border: 2px solid grey;
+        	padding: 6px;
+  		}
+  		.mediaContent > div > a > img{
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover;
+		    object-position: top;
+  		}
+  		.main{
+  			color: white;
+  			left: 10%;
+  			position: relative;
+  			font-family: 'Play', sans-serif;
+  			font-size: 60px;
+  			top: 10px;
+  		}
+  		.sub{
+  			color: white;
+  			left: 10%;
+  			position: relative;
+  			font-family: 'Play', sans-serif;
+  			font-size: 26px;
+  			font-style: italic;
+  			top: -5px;
+  		}
+  		.overlay{
+  			width: 100%;
+  			height: 100%;
+  			position: absolute;
+  			top: 0;
+  			left: 0;
+  			z-index: 2;
+  			transition: .5s;
+        	opacity: 0;
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+  		}
+  		.overlay:hover{
+  			background-color: rgba(0,0,0,0.5); 
+  			font-size: 20;
+  			transition: .5s;
+  			opacity: 1;
+  		}
+  		.name{
+  			font-size: 38px;
+  			color: white;
+  			font-family: 'B612 Mono', monospace;
+	        text-align: center;
+	        background-color: black;
+	        width: 100%;
+  		}
+  		.social{
+  			right: 10%;
+  			top: 60px;
+  			position: absolute;
+  			color: white;
+  		}
+    </style>
+</head>
+
+<body>
+	<div class="header">
+		<span class="main">Floor's</span>
+		<br>
+		<span class="sub">Small Collection</span>
+		<a href="https://twitter.com/Flooryde" target="_blank">
+			<i class="fab fa-twitter-square fa-2x social"></i>
+		</a>
+	</div>
+  	<div class="mediaContent">
+  		<div class="horizontal">
+  			<a href="https://github.com/2dFloor/Pygame/tree/master/Map%20Maker" target="_blank">
+  				<img src="images/8.png">
+  				<div class="overlay t1">
+  					<span class="name">Pygame Level Editor</span>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="vertical">
+  			<a href="https://github.com/2dFloor/HaloHistory" target="_blank">
+  				<img src="images/2.png">
+  				<div class="overlay">
+  					<span class="name">Halo 2/3/Reach History Scraper</span>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="horizontal">
+  			<a href="https://github.com/2dFloor/EpicMafia" target="_blank">
+  				<img src="images/3.png">
+  				<div class="overlay">
+  					<span class="name">EpicMafia Private Message Saver</span>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="vertical">
+  			<a href="https://github.com/2dFloor/PHP/tree/master/Item%20Display" target="_blank">
+  				<img src="images/4.png">
+  				<div class="overlay">
+  					<span class="name">Mock Product Gallery</span>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="horizontal">
+  			<a href="https://github.com/2dFloor/MiscEarlyWebDesign/tree/master/HTML%20Projects" target="_blank">
+  				<img src="images/5.png">
+				<div class="overlay">
+					<span class="name">Miscellaneous Web Design</span>
+				</div>
+  			</a>
+  		</div>
+  		<div class="vertical">
+  			<a href="https://github.com/2dFloor/Nyaa" target="_blank">
+  				<img src="images/6.png">
+				<div class="overlay">
+					<span class="name">Discord Bot</span>
+				</div>
+  			</a>
+  		</div>
+  		<div class="horizontal">
+  			<a href="https://github.com/2dFloor/Gaius" target="_blank">
+  				<img src="images/7.png">
+				<div class="overlay">
+					<span class="name">Crypto Bot</span>
+				</div>
+  			</a>
+  		</div>
+  		<div class="vertical">
+  			<a href="images/presstimator.png" target="_blank">
+  				<img src="images/1.png">
+				<div class="overlay">
+					<span class="name">Presstimator Site Redesign</span>
+				</div>
+  			</a>
+  		</div>
+  		<div class="horizontal">
+  			<a href="https://github.com/2dFloor/ASCIIFun/tree/master/Misc%20Python%20ASCII%20Fun" target="_blank">
+  				<img src="images/9.png">
+				<div class="overlay">
+					<span class="name">Simple ASCII Fun</span>
+				</div>
+  			</a>
+  		</div>		
+  	</div>	
+</body>
+</html>
+
+
